@@ -1,0 +1,32 @@
+{
+  "name": "derivo-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulp",
+  "scripts": {},
+  "author": "Peterjza",
+  "license": "ISC",
+  "scripts": {
+    "start": "webpack-dev-server --port 8000",
+    "test": "karma start"
+  },
+  "devDependencies": {
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-polyfill": "^6.13.0",
+    "babel-preset-es2015": "^6.14.0",
+    "css-loader": "^0.25.0",
+    "jasmine": "^2.2.1",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.3.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^1.0.2",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "karma-webpack": "^1.8.0",
+    "node-sass": "^3.10.0",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.1"
+  }
+}

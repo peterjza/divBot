@@ -1,0 +1,47 @@
+#grid {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap-reverse;
+    flex-direction: row;
+}
+
+#grid > li{
+    width: 100px;
+    height: 100px;
+    border: 1px solid #b8b8b8;
+    list-style: none;
+}
+
+
+
+//
+//
+//@for $i from 0 through 5 {
+//
+//    #grid > li:nth-child(#{ $i}) {
+//        left: $i - 1px;
+//        top:  $i - 1px;
+//    }
+//    #grid > li:nth-child(#{ $i + 1}) {
+//        left: $i - 1px;
+//        top:  $i - 1px;
+//    }
+//
+//}
+
+#base{
+    /*background-color: #4e4e4e;*/
+    transform: perspective( 630px )translateZ(-96px) translateY(-57px) rotateX( 58deg );
+    transition: all 1s ease;
+    width: 548px;
+    height: 500px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform-style: preserve-3d
+
+}
+
+.header{display: none}
+

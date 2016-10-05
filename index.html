@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Derivco Bot</title>
+</head>
+
+<body>
+
+    <nav>
+        <ul id="speedNav" class="speedNav"></ul>
+
+        <div id="teleportPad" class="teleportPad"></div>
+
+        <ul id="commandList"></ul>
+
+        <form class="formUI" action="">
+
+            <input id="input" type="text" value="place 0 0 north" required />
+            <button id="submit" type="submit">Submit orders</button>
+
+        </form>
+
+
+        <div id="btnNav" class="btnNav navBg">
+            <ul class="nav"> 
+                <li id="report">
+                    <a href="#" class="icon-home" data-command="report">
+                        <i class="fa fa-comments-o"></i>
+                    </a>
+                </li> 
+                <li id="left" data-target="left">
+                    <a href="#" class="icon-cog" data-command="left">
+                        <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+                    </a>
+                </li> 
+                <li id="move" data-target="move">
+                    <a href="#" class="icon-cw" data-command="move">
+                        <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+                    </a>
+                </li> 
+                <li id="right" data-target="right">
+                    <a href="#" class="icon-location" data-command="right">
+                        <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    </a>
+                </li> 
+            </ul> 
+        </div>
+
+    </nav>
+
+
+
+
+    <div id="base">
+
+        <div id="bot" class="bot__speed1 unplaced">
+
+
+            <div id="bot__head">
+                <div class='face'></div>
+                <div class='face'></div>
+                <div class='face'></div>
+                <div class='face'></div>
+                <div class='face'></div>
+                <div class='face'></div>
+            </div>
+            <div id="bot__body">
+                <div class='body'></div>
+                <div class='body'></div>
+                <div class='body'></div>
+                <div class='body'></div>
+                <div class='body'></div>
+                <div class='body'></div>
+            </div>
+
+        </div>
+
+        <div id="grid"></div>
+    </div>
+
+
+
+
+
+    <script src="./dist/bundle.js"></script>
+</body>
+</html>

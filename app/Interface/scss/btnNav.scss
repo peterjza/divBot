@@ -1,0 +1,173 @@
+
+
+//
+//nav button{
+//    background-color: #020202;
+//    border:none;
+//    vertical-align: bottom;
+//}
+
+.btnNav{
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 140px;
+    background: #f7f7f7 url(http://css-tricks.com/examples/RoundButtons/images/bg.png) repeat center top;
+    height: 140px;
+    width: 100%;
+    bottom: 0;
+    z-index: 999;
+    border-top: 3px solid #006db5;
+    box-shadow: 11px 0 21px rgba(0, 0, 0, 0.54);
+    li {
+        position: relative;
+        display: inline-block;
+        display: inline-block;
+        margin-right: -4px;
+
+        a {
+            display: block;
+            background-color: #f7f7f7;
+            background-image: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), to(#e7e7e7));
+            background-image: -webkit-linear-gradient(top, #f7f7f7, #e7e7e7);
+            background-image: -moz-linear-gradient(top, #f7f7f7, #e7e7e7);
+            background-image: -ms-linear-gradient(top, #f7f7f7, #e7e7e7);
+            background-image: -o-linear-gradient(top, #f7f7f7, #e7e7e7);
+            color: #a7a7a7;
+            margin: -3px;
+            width: 64px;
+            height: 64px;
+            position: relative;
+            text-align: center;
+            line-height: 144px;
+            border-radius: 50%;
+            box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
+            &:hover{
+                text-decoration: none;
+                color: #555;
+                background: #f5f5f5;
+            }
+            &:before {
+                content: "";
+                display: block;
+                background: #fff;
+                border-top: 2px solid #ddd;
+                position: absolute;
+                top: -8px;
+                left: -8px;
+                bottom: -8px;
+                right: -8px;
+                z-index: -1;
+                border-radius: 50%;
+                box-shadow: inset 0px 8px 48px #ddd;
+            }
+        }
+    }
+}
+nav button#move{
+    width: 40px;
+    height: 100px;
+}
+
+nav button#left{
+    width: 100px;
+}
+
+nav button#right{
+    width: 100px;
+}
+
+
+
+
+
+
+
+
+
+#move a{
+    width: 74px;
+    height: 74px;
+}
+
+#move {
+    z-index: 99 ;
+}
+#report a{
+    width: 44px;
+    height: 44px;
+
+    i{
+        position: absolute;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 40px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+}
+#move{
+    a:before {
+        content: "";
+        display: block;
+        background: #fff;
+        border-top: 2px solid #ddd;
+        position: absolute;
+        top: -6px;
+        left: -6px;
+        bottom: -6px;
+        right: -6px;
+        z-index: -1;
+        border-radius: 50%;
+        box-shadow: inset 0px 8px 48px #ddd;
+
+
+    }
+    i{
+        position: absolute;
+        text-align: center;
+        /* vertical-align: middle; */
+        line-height: 70px;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        font-size: 32px;
+    }
+}
+
+
+#left{
+
+    i{
+        position: absolute;
+        text-align: center;
+        /* vertical-align: middle; */
+        line-height: 62px;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        font-size: 22px;
+    }
+}
+
+
+
+#right{
+    i{
+        position: absolute;
+        text-align: center;
+
+        line-height: 62px;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        font-size: 22px;
+    }
+}

@@ -1,0 +1,289 @@
+
+
+$size: 50px;
+
+#bot {
+    position: absolute;
+    //bottom:0;
+    left:0;
+    width: 100px;
+    height: 100px;
+    background: transparent;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    top: 400px;
+
+    &__body{
+
+        position: absolute;
+        width: $size; height:  $size;
+        transform-style: preserve-3d;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        transform: translateZ(1px);
+        /*transform: rotateY(30deg) rotateX(10deg);*/
+
+        & > div {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #e6e6e6;
+            border: 1px solid #b8b8b8;
+            transform-style: preserve-3d;
+            background: #f7f7f7 url(http://css-tricks.com/examples/RoundButtons/images/bg.png) repeat center top;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    }
+
+    &__head{
+        position: absolute;
+        width: $size /2; height:  $size  /2;
+        transform-style: preserve-3d;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        transform: translateZ($size + 1);
+        color: red;
+
+        & > div{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #e6e6e6;
+            border: 1px solid #b8b8b8;
+            transform-style: preserve-3d;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    }
+
+
+    &.unplaced{
+
+        transform: translate(-120px, -30px) rotateZ(90deg);
+        .face{
+            opacity: 0.2;
+        }
+        .body{
+            opacity: 0.2;
+        }
+    }
+}
+
+
+
+
+.body:nth-child(1){
+    transform: translateZ( $size );
+}
+.body:nth-child(2){
+    transform: translateZ( 0 );
+}
+.body:nth-child(3){
+    transform: translateZ( $size / 2 ) translateY( $size / 2 ) rotateX(90deg) ;
+}
+.body:nth-child(4){
+    transform: translateZ( $size / 2 ) translateY( -$size / 2 ) rotateX(90deg) ;
+}
+.body:nth-child(5){
+    transform: translateZ( $size / 2 ) translateX( $size / 2 ) rotateY(90deg) ;
+}
+.body:nth-child(6){
+    transform: translateZ( $size / 2 ) translateX( -$size / 2 ) rotateY(90deg) ;
+}
+
+
+.face:nth-child(1){
+    transform: translateZ( $size/ 2 );
+}
+.face:nth-child(2){
+    transform: translateZ( 0 );
+}
+.face:nth-child(3){
+    transform: translateZ( $size / 4 ) translateY( $size / 4 ) rotateX(90deg) ;
+}
+.face:nth-child(4){
+    transform: translateZ( $size / 4 ) translateY( -$size / 4 ) rotateX(90deg) ;
+    background-color: #0099FF !important;
+}
+.face:nth-child(5){
+    transform: translateZ( $size / 4 ) translateX( $size / 4 ) rotateY(90deg) ;
+}
+.face:nth-child(6){
+    transform: translateZ( $size / 4 ) translateX( -$size / 4 ) rotateY(90deg) ;
+}
+
+.bot__speed0{
+    transition: transform .25s ;
+}
+.bot__speed1{
+    transition: transform 1s ;
+}
+.bot__speed2 {
+    transition: transform 3s ;
+}
+
+#grid h1{
+    transform: translateZ(120px) translateY(0) rotateX(-90deg) scale(1);
+    opacity: 1;
+    transition: all 4s ease-out;
+    position: absolute;
+    list-style: none;
+    background-color: #a7a7a7;
+    border: 6px solid #464646;
+    color: #181d21;
+    padding: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 22px;
+    border-radius: 20px 20px 1px;
+}
+
+#grid h1.animate{
+    transform: translateZ(230px) translateY(0) rotateX(-90deg) scale(2.2);
+    opacity: 0;
+}
+
+.robot-reject #bot__head{
+    animation: animationFramesReject linear 0.7s;
+    animation-iteration-count: 1;
+    transform-origin: 50% 50%;
+}
+
+@keyframes animationFramesReject{
+    0% {
+        transform:  translateZ(51px)  rotateZ(0deg) ;
+    }
+    15% {
+        transform:  translateZ(51px)   rotateZ(-14deg) ;
+    }
+    30% {
+        transform:  translateZ(51px)   rotateZ(7deg) ;
+    }
+    45% {
+        transform:  translateZ(51px)   rotateZ(-7deg) ;
+    }
+    60% {
+        transform:  translateZ(51px)  rotateZ(12deg) ;
+    }
+    75% {
+        transform:  translateZ(51px)  rotateZ(-4deg) ;
+    }
+    100% {
+        transform:  translateZ(51px)  rotateZ(0deg) ;
+    }
+}
+
+
+
+.robot-flicker .face, .robot-flicker .body{
+    animation: animationFramesFlicker linear 1s;
+    animation-iteration-count: 10;
+    transform-origin: 50% 50%;
+}
+
+@keyframes animationFramesFlicker{
+    0% {
+        opacity : 0.1;
+    }
+    10% {
+        opacity : 0;
+
+    }
+    20% {
+        opacity : 0.1
+
+    }
+    30% {
+        opacity : 0.1;
+
+    }
+    40% {
+        opacity : 0.1;
+
+    }
+    50% {
+        opacity : 0;
+
+    }
+    60% {
+        opacity : 0.1;
+
+    }
+    70% {
+        opacity : 0;
+
+    }
+    80% {
+        opacity : 0.2;
+
+    }
+    90% {
+        opacity : 0
+
+    }
+    100% {
+        opacity : 0;
+
+    }
+}
+
+.teleportOut .face, .teleportOut .body{
+    animation: animationTeleportOut linear 0.8s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    transform-origin: 50% 50%;
+}
+.teleportIn .face, .teleportIn .body{
+    animation: animationTeleportOut linear 1.4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    //animation-direction: reverse;
+    transform-origin: 50% 50%;
+}
+
+@keyframes animationTeleportOut{
+    0% {
+        opacity:1;
+        width : 100%;
+        height : 100%;
+        opacity: 1;
+    }
+    20% {
+        width : 0%;
+        height : 0%;
+        opacity: 0;
+    }
+
+    50% {
+
+    }
+    70% {
+
+    }
+    80% {
+        opacity: 0;
+        width : 0%;
+        height : 0%;
+    }
+    100% {
+        opacity:1;
+        width : 100%;
+        height : 100%;
+    }
+}
+
+
+
